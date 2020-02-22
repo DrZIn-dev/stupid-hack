@@ -127,9 +127,11 @@ function App() {
         </Grid>
       </form>
       <Grid container justify="center" style={{ paddingTop: "97PX" }}>
-        <Card className={classes.SalimCard}>
-          <SalimParam> {data} </SalimParam>
-        </Card>
+        {data === "" ? null : (
+          <Card className={classes.SalimCard}>
+            <SalimParam> {data} </SalimParam>
+          </Card>
+        )}
       </Grid>
     </Container>
   );
